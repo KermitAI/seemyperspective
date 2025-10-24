@@ -1,7 +1,7 @@
 <!-- File: styles.css -->
 :root{--accent:#7BAE7F;--text:#fff;--muted:rgba(255,255,255,.85);--shadow:0 20px 60px rgba(0,0,0,.45)}
 *{box-sizing:border-box}html,body{height:100%;margin:0}
-body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#000;color:var(--text)}
+body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#ffffff;color:var(--text)}
 
 
 /* Full-bleed background image with subtle overlay */
@@ -13,7 +13,7 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Ari
 /* Center stack */
 .center-stack{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;max-width:min(960px,92vw)}
 .logo{width:min(280px,48vw);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgb(255, 255, 255)}
+.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0, 0, 0, 0.397)}
 
 
 /* Buttons */
