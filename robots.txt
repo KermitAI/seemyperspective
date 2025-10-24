@@ -1,0 +1,4 @@
+<!-- File: robots.txt -->
+User-agent: *
+Allow: /
+Sitemap: https://seemyperspective.ca/sitemap.xml
