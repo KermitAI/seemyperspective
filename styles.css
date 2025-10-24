@@ -13,7 +13,7 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Ari
 /* Center stack */
 .center-stack{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;max-width:min(960px,92vw)}
 .logo{width:min(280px,48vw);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgb(255, 255, 255)}
 
 
 /* Buttons */
