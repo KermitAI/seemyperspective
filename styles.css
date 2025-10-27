@@ -1,37 +1,47 @@
-<!-- File: styles.css -->
-:root{--accent:#7BAE7F;--text:#ffffff;--muted:rgba(255,255,255,0.86);--shadow:0 20px 60px rgba(0,0,0,.45)}
+/* File: styles.css */
+:root{--accent:#7BAE7F;--text:#fff;--muted:rgba(255,255,255,.85);--shadow:0 20px 60px rgba(0,0,0,.45)}
 *{box-sizing:border-box}html,body{height:100%;margin:0}
-body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#000000;color:#ffffff}
+body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#000;color:var(--text)}
 
-
-/* Full-bleed background image with subtle overlay */
+/* ---- Landing (index) ---- */
 .cover{position:relative;min-height:100dvh;display:grid;place-items:center;padding:6vh 1.25rem}
-.cover::before{content:"";position:absolute;inset:0;background-image:var(--bg-url);background-position:center}
-
-
-/* Center stack */
+.cover::before{content:"";position:absolute;inset:0;background-image:var(--bg-url);background-position:center;background-size:cover;filter:saturate(1.05) contrast(1.05)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55))}
 .center-stack{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;max-width:min(960px,92vw)}
 .logo{width:min(280px,48vw);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0, 0, 0, 0.397)}
-
-
-/* Buttons */
+.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0,0,0,.4)}
 .btn-row{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:.5rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.9);color:#111;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.8);backdrop-filter:saturate(140%) blur(4px);box-shadow:var(--shadow)}
 .btn:hover{transform:translateY(-1px)}
-
-
-/* Bottom note pinned to bottom center */
 .bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(255,255,255,.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
 
+/* ---- Text pages (discordapps) ---- */
+main.page{position:relative;min-height:100dvh;padding:4rem 1.25rem}
+main.page::before{content:"";position:fixed;inset:0;background-image:var(--bg-url);background-size:cover;background-position:center;z-index:-2}
+main.page::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));z-index:-1}
 
-/* Responsive tweaks */
+.content{max-width:1000px;margin:0 auto;line-height:1.7}
+.content h1{font-size:clamp(1.8rem, 2.8vw, 2.4rem);margin:0 0 1rem}
+.content h2{margin:2.25rem 0 0.75rem}
+.content .lead{color:var(--muted)}
+.logo-row{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin:1.25rem 0}
+.logo-row img{max-height:72px;height:auto}
+.section{margin:2rem 0}
+.rule{height:1px;background:rgba(255,255,255,.12);margin:2rem 0}
+.feature-list{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
+.feature-list h3{margin:.25rem 0}
+.content a{color:var(--text);text-decoration:underline}
+
+/* Optional blur: toggle by adding class 'blur' to .content */
+.content.blur{background:rgba(20,20,24,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem 1.25rem}
+
+.footer{margin:3rem 0 1rem;opacity:.9}
+.footer a{color:var(--text)}
+
 @media (max-width:640px){
-.logo{width:min(220px,60vw)}
-.tag{font-size:.9rem}
-.btn{width:100%;max-width:360px}
+  .logo{width:min(220px,60vw)}
+  .tag{font-size:.9rem}
+  .btn{width:100%;max-width:360px}
 }
 
-
-/* Accessibility */
 :focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
