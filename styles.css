@@ -108,11 +108,16 @@ main.page::after {
 :focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
 
 /* ---------- Top navigation (DiscordApps only) ---------- */
+/* ---------- Top navigation (DiscordApps only) ---------- */
 .top-nav {
   position: absolute;
   top: 1.25rem;
   left: 1.25rem;
   z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
 }
 
 .top-nav ul {
@@ -124,22 +129,24 @@ main.page::after {
 }
 
 .top-nav a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-  font-weight: 600;
+  font-family: 'Lexend', sans-serif;      /* Use Lexend font */
+  color: #fff;                            /* Always white */
+  text-decoration: none;                  /* Remove underline */
+  font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
-.top-nav a:hover {
+/* Hover / focus states */
+.top-nav a:hover,
+.top-nav a:focus {
+  opacity: 0.75;
+}
+
+/* Prevent browser “visited link” color from changing */
+.top-nav a:visited {
   color: #fff;
+  text-decoration: none;
 }
 
-/* Optional: subtle background box behind links */
-.top-nav {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  backdrop-filter: blur(6px);
-}
