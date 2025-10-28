@@ -26,7 +26,12 @@ main.page::after{content:"";position:fixed;inset:0;background:linear-gradient(18
 .content h2{margin:2.25rem 0 0.75rem}
 .content .lead{color:var(--muted)}
 .logo-row{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin:1.25rem 0}
-.logo-row img{max-height:72px;height:auto}
+.logo-row img {
+  max-width: 100%;       /* ensures it won’t overflow */
+  width: 100%;            /* makes it align to text width */
+  height: auto;
+  border-radius: 8px;     /* optional – softens edges */
+}
 .section{margin:2rem 0}
 .rule{height:1px;background:rgba(255,255,255,.12);margin:2rem 0}
 .feature-list{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
@@ -36,8 +41,30 @@ main.page::after{content:"";position:fixed;inset:0;background:linear-gradient(18
 /* Optional blur: toggle by adding class 'blur' to .content */
 .content.blur{background:rgba(20,20,24,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem 1.25rem}
 
-.footer{margin:3rem 0 1rem;opacity:.9}
-.footer a{color:var(--text)}
+.footer {
+  margin: 5rem 0 2rem;    /* adds more breathing room above/below */
+  text-align: center;     /* centers all text and links */
+  font-size: 0.9rem;      /* slightly smaller text */
+  color: rgba(255,255,255,0.6);  /* faded white tone */
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.footer a {
+  color: rgba(255,255,255,0.75); /* faded link color */
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #fff; /* brighten on hover */
+  text-decoration: underline;
+}
 
 @media (max-width:640px){
   .logo{width:min(220px,60vw)}
