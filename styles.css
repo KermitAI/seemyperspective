@@ -35,7 +35,11 @@ main.page::after {
   background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
   z-index: -1;
 }
-.content{max-width:1000px;margin:0 auto;line-height:1.7}
+.content {
+  max-width: 1000px;
+  margin: 4rem auto 0;   /* adds top margin */
+  line-height: 1.7;
+}
 .content h1 {
   font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   text-align: center;      /* centers the heading */
@@ -60,10 +64,10 @@ main.page::after {
 .content.blur{background:rgba(20,20,24,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem 1.25rem}
 
 .footer {
-  margin: 5rem 0 2rem;    /* adds more breathing room above/below */
-  text-align: center;     /* centers all text and links */
-  font-size: 0.9rem;      /* slightly smaller text */
-  color: rgba(255,255,255,0.6);  /* faded white tone */
+  margin: 5rem 0 4rem;   /* extra bottom spacing */
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
 }
 
 .footer::before {
