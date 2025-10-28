@@ -91,3 +91,40 @@ main.page::after {
 }
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
+
+/* ---------- Top navigation (DiscordApps only) ---------- */
+.top-nav {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 10;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.top-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: #fff;
+}
+
+/* Optional: subtle background box behind links */
+.top-nav {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
