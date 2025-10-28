@@ -17,10 +17,24 @@ body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Ari
 .bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(255,255,255,.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
 
 /* ---- Text pages (discordapps) ---- */
-main.page{position:relative;min-height:100dvh;padding:4rem 1.25rem}
-main.page::before{content:"";position:fixed;inset:0;background-image:var(--bg-url);background-size:cover;background-position:center;z-index:-2}
-main.page::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));z-index:-1}
+main.page { position: relative; min-height: 100dvh; }
 
+main.page::before {
+  content: "";
+  position: absolute;       /* was fixed */
+  inset: 0;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+main.page::after {
+  content: "";
+  position: absolute;       /* was fixed */
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+  z-index: -1;
+}
 .content{max-width:1000px;margin:0 auto;line-height:1.7}
 .content h1{font-size:clamp(1.8rem, 2.8vw, 2.4rem);margin:0 0 1rem}
 .content h2{margin:2.25rem 0 0.75rem}
