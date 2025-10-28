@@ -36,7 +36,11 @@ main.page::after {
   z-index: -1;
 }
 .content{max-width:1000px;margin:0 auto;line-height:1.7}
-.content h1{font-size:clamp(1.8rem, 2.8vw, 2.4rem);margin:0 0 1rem}
+.content h1 {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  text-align: center;      /* centers the heading */
+  margin: 0 0 1.5rem;      /* adds extra space below before paragraph */
+}
 .content h2{margin:2.25rem 0 0.75rem}
 .content .lead{color:var(--muted)}
 .logo-row{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin:1.25rem 0}
