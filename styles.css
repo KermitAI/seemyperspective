@@ -1,8 +1,19 @@
 /* File: styles.css */
 :root{--accent:#7BAE7F;--text:#fff;--muted:rgba(255,255,255,.85);--shadow:0 20px 60px rgba(0,0,0,.45)}
 *{box-sizing:border-box}html,body{height:100%;margin:0}
-body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#000;color:var(--text)}
-
+body {
+  font-family: 'Lexend', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  background: #000;
+  color: var(--text);
+  font-weight: 400;
+}
+/* Header fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
 /* ---- Landing (index) ---- */
 .cover{position:relative;min-height:100dvh;display:grid;place-items:center;padding:6vh 1.25rem}
 .cover::before{content:"";position:absolute;inset:0;background-image:var(--bg-url);background-position:center;background-size:cover;filter:saturate(1.05) contrast(1.05)}
