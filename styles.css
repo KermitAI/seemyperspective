@@ -72,7 +72,14 @@ main.page::after {
 .content a{color:var(--text);text-decoration:underline}
 
 /* Optional blur: toggle by adding class 'blur' to .content */
-.content.blur{background:rgba(20,20,24,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem 1.25rem}
+/*.content.blur{
+  background:rgba(20,20,24,.35);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:1rem 1.25rem
+  }*/
 
 .footer {
   margin: 5rem 0 10rem;   /* extra bottom spacing */
@@ -127,10 +134,26 @@ main.page::after {
 }
 
 .top-nav a,
-.top-nav a:link,
-.top-nav a:visited,
-.top-nav a:hover,
-.top-nav a:active,
+.top-nav a:link{
+  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
+  color: #fff !important;                        /* Always white */
+  text-decoration: none !important;              /* Never underlined */
+}
+.top-nav a:visited{
+  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
+  color: #fff !important;                        /* Always white */
+  text-decoration: none !important;              /* Never underlined */
+}
+.top-nav a:hover{
+  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
+  color: #8d8d8d !important;                    /* Slightly gray on hover */
+  text-decoration: none !important;              /* Never underlined */
+}
+.top-nav a:active{
+  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
+  color: #fff !important;                        /* Always white */
+  text-decoration: none !important;              /* Never underlined */
+}
 .top-nav a:focus {
   font-family: 'Lexend', sans-serif !important;  /* Enforce Lexend */
   color: #fff !important;                        /* Always white */
