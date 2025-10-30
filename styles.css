@@ -132,6 +132,7 @@ main.page {
   top: var(--edge-gap);
   left: var(--edge-gap);
   z-index: 10;
+  background: rgba(0,0,0,.0);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   backdrop-filter: blur(6px);
@@ -146,7 +147,7 @@ main.page {
 .top-nav a:hover,
 .top-nav a:active,
 .top-nav a:focus {
-  font-family: 'Russo One' !important;   /* Russo One for these links */
+  font-family: 'Russo One', sans-serif !important;   /* Russo One for these links */
   color: #fff !important;
   text-decoration: none !important;
   font-weight: 400;
@@ -163,6 +164,7 @@ main.page {
   top: var(--edge-gap);
   right: var(--edge-gap);
   z-index: 10;
+  background: rgba(0,0,0,.0);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   backdrop-filter: blur(6px);
@@ -171,7 +173,7 @@ main.page {
 .social-nav img {
   display: block;
   width: 18px; height: 18px;          /* adjust to your icon size */
-  filter: drop-shadow(0 1px 2px rgb(255, 255, 255));
+  filter: drop-shadow(0 1px 2px rgb(167, 167, 167));
 }
 .social-nav a { line-height: 0; }      /* tighter clickable area */
 
