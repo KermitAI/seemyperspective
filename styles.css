@@ -114,59 +114,68 @@ main.page::after {
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
 
-/* ---------- Top navigation (DiscordApps only) ---------- */
+/* ===== DiscordApps chrome spacing & fonts ===== */
+main.page {
+  /* control both corner offsets and header gap from one place */
+  --edge-gap: 1.25rem;        /* distance from top/left/right edges (orange/green boxes) */
+  --header-gap: 7rem;         /* vertical space before "Discord Apps" (red box feel) */
+}
+
+/* Make the H1 sit lower to match the red-box spacing */
+.content { 
+  margin: calc(var(--header-gap)) auto 0; 
+}
+
+/* Top-left page links */
 .top-nav {
   position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
+  top: var(--edge-gap);
+  left: var(--edge-gap);
   z-index: 10;
+  background: rgba(0,0,0,.30);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   backdrop-filter: blur(6px);
 }
-
 .top-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: 1rem;
 }
-
 .top-nav a,
-.top-nav a:link{
-  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
-  color: #fff !important;                        /* Always white */
-  text-decoration: none !important;              /* Never underlined */
-}
-.top-nav a:visited{
-  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
-  color: #fff !important;                        /* Always white */
-  text-decoration: none !important;              /* Never underlined */
-}
-.top-nav a:hover{
-  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
-  color: #8d8d8d !important;                    /* Slightly gray on hover */
-  text-decoration: none !important;              /* Never underlined */
-}
-.top-nav a:active{
-  font-family: 'Russo One', sans-serif !important;  /* Enforce Russo */
-  color: #fff !important;                        /* Always white */
-  text-decoration: none !important;              /* Never underlined */
-}
-.top-nav a:focus {
-  font-family: 'Lexend', sans-serif !important;  /* Enforce Lexend */
-  color: #fff !important;                        /* Always white */
-  text-decoration: none !important;              /* Never underlined */
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  transition: opacity 0.2s ease;
-}
-
+.top-nav a:link,
+.top-nav a:visited,
 .top-nav a:hover,
+.top-nav a:active,
 .top-nav a:focus {
-  opacity: 0.75;  /* Simple fade on hover/focus */
+  font-family: 'Russo One', sans-serif !important;   /* Russo One for these links */
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  transition: opacity .2s ease;
 }
+.top-nav a:hover,
+.top-nav a:focus { opacity: .75; }
 
+/* Top-right social icons, same corner distance as top-nav */
+.social-nav {
+  position: absolute;
+  top: var(--edge-gap);
+  right: var(--edge-gap);
+  z-index: 10;
+  background: rgba(0,0,0,.30);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  display: flex; gap: 0.75rem; align-items: center;
+}
+.social-nav img {
+  display: block;
+  width: 18px; height: 18px;          /* adjust to your icon size */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
+}
+.social-nav a { line-height: 0; }      /* tighter clickable area */
 
+/* (Optional) tweak if you want a bit more space below H1 too */
+.content h1 { margin: 0 0 1.5rem; text-align: center; }
