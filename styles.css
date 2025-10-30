@@ -146,7 +146,7 @@ main.page {
 .top-nav a:hover,
 .top-nav a:active,
 .top-nav a:focus {
-  font-family: 'Russo One', sans-serif !important;   /* Russo One for these links */
+  font-family: 'Russo One' !important;   /* Russo One for these links */
   color: #fff !important;
   text-decoration: none !important;
   font-weight: 400;
