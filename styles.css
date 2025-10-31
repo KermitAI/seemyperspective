@@ -23,28 +23,28 @@ h1, h2, h3, h4, h5, h6 {
 .logo{width:min(280px,48vw);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
 .tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0,0,0,.4)}
 .btn-row{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:.5rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.9);color:#111;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.8);backdrop-filter:saturate(140%) blur(4px);box-shadow:var(--shadow)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.9);color:#111;text-decoration:none;font-weight:700;border:1px solid rgba(0, 0, 0, 0.8);backdrop-filter:saturate(140%) blur(4px);box-shadow:var(--shadow)}
 .btn:hover{transform:translateY(-1px)}
-.bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(255,255,255,.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(0, 0, 0, 0.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
 
 /* ---- Text pages (discordapps) ---- */
 main.page { position: relative; min-height: 100dvh; }
 
-main.page::before {
+main.page::before,
+main.page::after {
   content: "";
   position: absolute;       /* was fixed */
   inset: 0;
   background-image: var(--bg-url);
   background-size: cover;
   background-position: center;
-  z-index: -2;
-}
-main.page::after {
-  content: "";
-  position: absolute;       /* was fixed */
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
   z-index: -1;
+}
+main.page {
+  position: relative;
+  z-index: 0;          /* <<< add this */
+  min-height: 100dvh;
+  padding: 4rem 1.25rem;
 }
 .content {
   max-width: 1000px;
@@ -52,7 +52,7 @@ main.page::after {
   line-height: 1.7;
 }
 .content h1 {
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
   text-align: center;      /* centers the heading */
   margin: 0 0 1.5rem;      /* adds extra space below before paragraph */
 }
@@ -132,7 +132,7 @@ main.page {
   top: var(--edge-gap);
   left: var(--edge-gap);
   z-index: 10;
-  background: rgb(184, 184, 184);
+  background: rgba(255, 64, 64, 0);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   backdrop-filter: blur(6px);
@@ -171,9 +171,20 @@ main.page {
 .social-nav img {
   display: block;
   width: 18px; height: 18px;          /* adjust to your icon size */
-  filter: drop-shadow(0 1px 2px rgb(167, 167, 167));
+  filter: drop-shadow(0 1px 2px rgba(167, 167, 167,0.0));
 }
 .social-nav a { line-height: 0; }      /* tighter clickable area */
 
 /* (Optional) tweak if you want a bit more space below H1 too */
 .content h1 { margin: 0 0 1.5rem; text-align: center; }
+
+/* White button text for Discord Apps page only */
+body.page .btn {
+  color: #000000 !important;        /* make text black */
+  text-decoration: none !important;
+}
+
+body.page .btn:hover {
+  background: rgb(197, 197, 197);
+  text-decoration: none !important;
+}
