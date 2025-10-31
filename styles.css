@@ -155,8 +155,6 @@ main.page {
   letter-spacing: 0.4px;
   transition: opacity .2s ease;
 }
-.top-nav a:hover,
-.top-nav a:focus { opacity: .75; }
 
 /* Top-right social icons, same corner distance as top-nav */
 .social-nav {
