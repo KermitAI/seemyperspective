@@ -21,11 +21,72 @@ h1, h2, h3, h4, h5, h6 {
 /*background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55))*/} 
 .center-stack{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;max-width:min(960px,92vw)}
 .logo{width:min(280px,48vw);height:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.tag{font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-shadow:0 2px 8px rgba(0,0,0,.4)}
-.btn-row{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:.5rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.9);color:#111;text-decoration:none;font-weight:700;border:1px solid rgba(0, 0, 0, 0.8);backdrop-filter:saturate(140%) blur(4px);box-shadow:var(--shadow)}
-.btn:hover{transform:translateY(-1px)}
-.bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(0, 0, 0, 0.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.tag{
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-shadow:0 2px 8px rgba(0,0,0,.4)
+}
+.social-row{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:1.5rem;
+  margin-top:2rem 0;
+}
+.social-row a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.25);
+  transition: transform .2s ease, background .2s ease;
+}
+.social-row a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.514);
+}
+.social-row img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: brightness(0);
+}
+.btn-row{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:.5rem
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.9rem 1.25rem;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:#111;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid rgba(255, 255, 255, 0);
+  backdrop-filter:saturate(140%) blur(4px);
+  box-shadow:var(--shadow)
+}
+.btn:hover{
+  transform:translateY(-2px);
+  transition: transform .2s ease, background .2s ease;
+}
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.3);
+}
+.bottom-note{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:1;font-size:.95rem;color:rgba(255, 255, 255, 0.9);text-shadow:0 2px 8px rgba(0,0,0,.5)}
 
 /* ---- Text pages (discordapps) ---- */
 main.page { position: relative; min-height: 100dvh; }
