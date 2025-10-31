@@ -132,7 +132,7 @@ main.page {
   top: var(--edge-gap);
   left: var(--edge-gap);
   z-index: 10;
-  background: rgba(0,0,0,.0);
+  background: rgb(184, 184, 184);
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   backdrop-filter: blur(6px);
